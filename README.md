@@ -1,4 +1,6 @@
-## Setup & coding
+# Source
+https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe
+# Setup & coding
 Tạo packaget.js
 ```
 npm init
@@ -15,13 +17,30 @@ npm install rollup @rollup/plugin-node-resolve @rollup/plugin-typescript @rollup
 ```
 Tạo file config rollup rollup.config.js
 
-Chạy tạo lib
+Chạy tạo lib trong thư mục dist
 ```
 npm run rollup
 ```
 
-## Document Library
-### Rollup
+# Public github package
+Tạo file .npmrc với nội dung
+C:\Users\{YOUR_WINDOWS_USERNAME}\.npmrc
+```
+registry=https://registry.npmjs.org/
+@YOUR_GITHUB_USERNAME:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=YOUR_AUTH_TOKEN
+```
+Public library lên github response
+```
+1. Chỉnh version phù hợp
+npm publish
+
+```
+Kết quả
+https://github.com/tranminhbinhit?tab=packages
+
+# Document Library
+## Rollup
     Mặc dù cả hai công cụ đều có thể hoàn thành cùng một mục tiêu tùy thuộc vào cấu hình, nhưng thông thường, 
     - webpack được sử dụng để đóng gói các ứng dụng
     - Rollup phù hợp với các thư viện đóng gói
